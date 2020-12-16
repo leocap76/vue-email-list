@@ -15,11 +15,11 @@ var app = new Vue({
      for(i=0; i<10; i++) {
          axios
            .get('https://flynn.boolean.careers/exercises/api/random/mail')
-           .then(function (response) {
+           .then((response) => {
              const result = response.data;
                console.log(response.data);
                // document.write(result);
-               emailList.push(result);
+               this.emailList.push(result);
            }
          )
        }
